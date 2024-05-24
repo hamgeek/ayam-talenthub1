@@ -1,0 +1,58 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "next/core-web-vitals",
+    "airbnb",
+    "airbnb/hooks",
+    "airbnb-typescript",
+    "plugin:prettier/recommended",
+    "prettier",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/stylistic"
+  ],
+  "plugins": ["simple-import-sort", "import", "react"],
+  "ignorePatterns": [
+    "next.config.mjs", 
+    "lint-staged.config.js",
+    "tailwind.config.ts",
+    "tsconfig.json"
+  ],
+  "rules": {
+    "object-curly-newline": "off",
+    "linebreak-style": "error",
+    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": "error",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off",
+    "import/prefer-default-export": "off",
+    "import/no-unresolved": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 80
+      }
+    ]
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": "latest",
+    "project": "./tsconfig.json",
+    "ecmaFeatures": {
+      "tsx": false
+    }
+  }
+}
